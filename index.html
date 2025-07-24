@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <i class="fas fa-film"></i>
+                MovieExplorer
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">TV Shows</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="search-container">
+            <h1>Discover Your Next Favorite Movie</h1>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search for movies...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Categories Section -->
+        <section class="categories">
+            <h2 class="section-title">Browse Movies</h2>
+            <div class="category-buttons">
+                <button class="category-btn active" data-category="popular">Popular</button>
+                <button class="category-btn" data-category="top_rated">Top Rated</button>
+                <button class="category-btn" data-category="upcoming">Upcoming</button>
+                <button class="category-btn" data-category="now_playing">Now Playing</button>
+                <button class="category-btn" data-genre="28">Action</button>
+                <button class="category-btn" data-genre="12">Adventure</button>
+                <button class="category-btn" data-genre="16">Animation</button>
+                <button class="category-btn" data-genre="35">Comedy</button>
+                <button class="category-btn" data-genre="80">Crime</button>
+                <button class="category-btn" data-genre="18">Drama</button>
+            </div>
+
+            <div class="spinner" id="spinner"></div>
+            <div class="movies-grid" id="movies-grid"></div>
+        </section>
+    </main>
+
+    <!-- Movie Details Modal -->
+    <div class="modal" id="movie-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="" alt="Movie Backdrop" class="modal-backdrop" id="modal-backdrop">
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="" alt="Movie Poster" class="modal-poster" id="modal-poster">
+                <h2 class="modal-title" id="modal-title"></h2>
+                <div class="modal-meta">
+                    <span id="modal-year"></span>
+                    <span id="modal-runtime"></span>
+                    <span class="modal-rating" id="modal-rating"></span>
+                    <span id="modal-genres"></span>
+                </div>
+                <p class="modal-overview" id="modal-overview"></p>
+                
+                <div class="modal-cast">
+                    <h3 class="cast-title">Top Cast</h3>
+                    <div class="cast-grid" id="cast-grid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-column">
+                <h3>MovieExplorer</h3>
+                <p>Discover and explore your favorite movies and TV shows with our comprehensive database.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">TV Shows</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Comedy</a></li>
+                    <li><a href="#">Drama</a></li>
+                    <li><a href="#">Horror</a></li>
+                    <li><a href="#">Sci-Fi</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter for the latest movie updates.</p>
+                <div class="search-box" style="margin-top: 10px;">
+                    <input type="email" placeholder="Your Email">
+                    <button style="padding: 0 15px;"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 MovieExplorer. All Rights Reserved. Developed by Vishal Yadav</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+    <body
